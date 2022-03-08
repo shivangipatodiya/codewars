@@ -16,9 +16,11 @@
 # print(square_digits(23))
 
 def high_and_low(numbers):
-  for num in list(numbers):
-    if num == " ":
-      
-  return 
+  def num(x):
+    return int(x)
+  ordered = sorted(map(num, numbers.split(" ")))
+  result = [str(ordered[len(ordered) - 1]),str(ordered[0])]
+  return " ".join(result)
+   
 
 print(high_and_low("1 2 -3 4 5"))
